@@ -1,11 +1,8 @@
-import { useState, useEffect } from "react"
 import { supabase } from "../utils/supabaseClient"
-import Auth from "../components/Auth"
-import App from "../components/App"
+import { useEffect, useState } from "react"
+import Auth from "./Auth"
 
-import styles from '../styles/Home.module.css'
-
-export default function Home() {
+export default function Route({ children }) {
 
     const [session, setSession] = useState(null)
 
@@ -18,8 +15,8 @@ export default function Home() {
     }, [])
 
     return (
-    <div className={styles.container}>
-        {!session ? <Auth /> : <App />}
-    </div>
+        <>
+            {session ? children : <Auth />}
+        </>
     )
 }

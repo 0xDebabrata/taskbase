@@ -41,7 +41,7 @@ export default function Auth() {
     return (
         <div className={styles.container}>
             <div className={styles.box}>
-                <h1>Camp</h1>
+                <h1>Taskbase</h1>
                 <p>Sign in</p>
                 <form 
                     onSubmit={handleSubmit}
