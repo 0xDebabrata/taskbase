@@ -1,0 +1,81 @@
+.card {
+    width: 100%;
+    height: 50px;
+    border-radius: 7px;
+    background-color: snow;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.7s all;
+}
+
+.card:hover {
+    background-color: lightblue;
+}
+
+.card h2 {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* INVITE CARDS */
+
+.invite {
+    width: 100%;
+    height: 90px;
+    border-radius: 7px;
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin: 10px 0;
+    transition: 0.7s all;
+}
+
+.invite h2 {
+    margin: 0;
+}
+
+.invite p {
+    margin: 0;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.btnWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10px;
+    height: 70px;
+}
+
+.btnWrapper button {
+    width: 70px;
+    height: 30px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.accept {
+    border: none;
+}
+
+.ignore {
+    background-color: transparent;
+    border: 1px solid black;
+}

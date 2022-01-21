@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import {useEffect, useState} from "react"
 import { useRouter } from "next/router"
 import { supabase } from "../utils/supabaseClient"
+import Link from "next/link"
 import toast from "react-hot-toast"
 import ProtectedRoute from "../components/ProtectedRoute"
 
@@ -76,6 +77,7 @@ export default function New() {
                                 <Invite invites={invites}
                                     setInvites={setInvites}
                                     uuid={uuid}
+                                    name={name}
                                 />}
                         </motion.div>                
                     </AnimatePresence>
@@ -105,7 +107,7 @@ const Name = ({ name, setName, handleSubmit }) => {
     )
 }
 
-const Invite = ({ invites, setInvites, uuid }) => {
+const Invite = ({ invites, setInvites, uuid, name }) => {
 
     const [email, setEmail] = useState("")
     const [suggestions, setSuggestions] = useState([])
@@ -122,9 +124,10 @@ const Invite = ({ invites, setInvites, uuid }) => {
         const { data } = await supabase
             .from("users")
             .select("email")
-            .like("email", `%${email}%`)
+            .like("email", `${email}%`)
 
-        setSuggestions(data)
+        const results = data.filter(sugg => sugg.email !== supabase.auth.user().email)
+        setSuggestions(results)
     }
 
     const handleClick = (e) => {
@@ -141,7 +144,8 @@ const Invite = ({ invites, setInvites, uuid }) => {
             rows.push({ 
                 email, 
                 project_id: uuid,
-                creator_id: supabase.auth.user().id
+                creator_id: supabase.auth.user().id,
+                project_name: name 
             })
         })
 
@@ -196,6 +200,7 @@ const Invite = ({ invites, setInvites, uuid }) => {
             })}
             <div className={styles.search}>
                 <input type="email"
+                    autoComplete="off"
                     value={email}
                     onChange={(e) => {
                         setEmail(e.target.value)
@@ -213,9 +218,15 @@ const Invite = ({ invites, setInvites, uuid }) => {
                         arr={suggestions} />
                 )}
             </div>
-            <button disabled={invites.length ? false : true}
-                onClick={handleInvite}
-            >Send invitation</button>
+            <div className={styles.btnWrapper}>
+                <Link href={`/${uuid}`}
+                >
+                    Skip
+                </Link>
+                <button disabled={invites.length ? false : true}
+                    onClick={handleInvite}
+                >Send invitation</button>
+            </div>
         </div>
     )
 }

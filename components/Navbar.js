@@ -7,7 +7,7 @@ export default function Navbar() {
     return (
         <div className={styles.nav}>
             <Link href="/">
-                <h1>Taskbase</h1>
+                <h1>TaskBase</h1>
             </Link>
             <button
                 onClick={() => supabase.auth.signOut()}
