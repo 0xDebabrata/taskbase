@@ -1,0 +1,152 @@
+.container {
+    width: 100%;
+    flex: 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 400px;
+    border-radius: 7px;
+    background-color: gray;
+    min-height: 190px;
+}
+
+.tabs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: gray;
+    border-radius: 7px;
+}
+
+.tabs div {
+    width: 185px;
+    height: 35px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabs p {
+    z-index: 10;
+}
+
+.selected {
+    position: absolute;
+    background-color: white;
+    width: 235px;
+    height: 35px;
+    border-radius: 7px;
+}
+
+/* NAME */
+
+.form {
+    width: 100%;
+    padding: 10px;
+}
+
+.form input {
+    width: 100%;
+    border-radius: 7px;
+    border: none;
+    height: 30px;
+    padding: 0 10px;
+}
+
+.form input:focus {
+    outline: none;
+}
+
+.form button {
+    cursor: pointer;
+    border-radius: 7px;
+    border: none;
+    height: 30px;
+    width: 80px;
+    float: right;
+    margin: 10px 0;
+}
+
+/* INVITE */
+
+.inviteContainer {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 100%;
+    height: 35px;
+    background-color: white;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    border-radius: 7px;
+}
+
+.wrapper img {
+    cursor: pointer;
+}
+
+.inviteContainer button {
+    cursor: pointer;
+    border-radius: 7px;
+    border: none;
+    height: 30px;
+    width: 150px;
+    margin: 10px 0 30px 0;
+    margin-left: auto;
+}
+
+.inviteContainer input {
+    width: 100%;
+    border-radius: 7px;
+    border: none;
+    height: 30px;
+    padding: 0 10px;
+    margin-top: 15px;
+}
+
+.inviteContainer input:focus {
+    outline: none;
+}
+
+.search {
+    position: relative;
+}
+
+/* SUGGESTIONS */
+.suggestions {
+    position: absolute;
+    top: 50px;
+    background-color: pink;
+    border-radius: 7px;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+.suggestions li {
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 2px 0;
+    cursor: pointer;
+}
+
+.suggestions li:hover {
+    background-color: white;
+
+}
