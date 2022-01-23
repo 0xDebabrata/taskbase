@@ -1,0 +1,7 @@
+.container {
+    height: calc(100vh - 55px);
+    width: 50%;
+    display: flex;
+    background-color: white;
+}
+

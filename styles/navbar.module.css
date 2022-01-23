@@ -4,9 +4,26 @@
     padding: 10px 20px;
     justify-content: space-between;
     align-items: center;
-    background-color: gray;
 }
 
 .nav h1 {
     margin: 0;
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+.nav button {
+    height: 30px;
+    width: 80px;
+    border: 2px solid var(--primary-color);
+    border-radius: 7px;
+    background-color: transparent;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: .5s all;
+}
+
+.nav button:hover {
+    background-color: var(--primary-color);
+    color: white;
 }

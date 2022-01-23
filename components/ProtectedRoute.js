@@ -4,7 +4,7 @@ import Auth from "./Auth"
 
 export default function Route({ children }) {
 
-    const [session, setSession] = useState(null)
+    const [session, setSession] = useState(supabase.auth.session() ? supabase.auth.session() : null)
 
     useEffect(() => {
         setSession(supabase.auth.session())
