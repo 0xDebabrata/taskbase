@@ -19,6 +19,21 @@
     justify-content: center;
     transition: .5s all;
     position: relative;
+    z-index: 10;
+}
+
+.tag {
+    position: absolute;
+    left: 65px;
+    font-size: 12px;
+    color: white;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+}
+
+.tag p {
+    margin: 0;
+    padding: 5px 10px;
 }
 
 .accent {

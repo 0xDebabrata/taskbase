@@ -11,6 +11,9 @@ export default function ControlCentre({ projectId }) {
     }, {
         name: "Tasks",
         img: "/tasks-icon.svg"
+    }, {
+        name: "Participants",
+        img: "/participants-icon.svg"
     }]
 
     const [selectedTab, setSelectedTab] = useState(tabs[0])
