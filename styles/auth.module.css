@@ -1,20 +1,23 @@
 .container {
     width: 100%;
+    height: calc(100vh - 55px);
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--primary-color);
 }
 
 .box {
     width: 450px;
     height: 250px;
-    background-color: blue;
+    background-color: var(--secondary-color);
     border-radius: 7px;
     padding: 30px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    transform: translateY(-50px);
 }
 
 .box h1 {
@@ -40,6 +43,12 @@
     border-radius: 7px;
     padding: 5px 15px;
     margin-top: 30px;
+    color: #696969D9;
+}
+
+.email::placeholder {
+    font-family: "Poppins";
+    color: #696969D9;
 }
 
 .email:focus {
@@ -48,10 +57,12 @@
 
 .form button {
     height: 30px;
-    width: 125px;
+    width: 145px;
     font-size: 14px;
     border: none;
     border-radius: 7px;
     margin-top: 15px;
     cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
 }
