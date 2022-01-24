@@ -2,15 +2,17 @@
     width: 70%;
     margin: 0 auto;
     flex: 1 auto;
+    color: var(--primary-color);
 }
 
 .wrapper {
     width: 100%;
-    background-color: lightblue;
+    background-color: var(--secondary-color);
     border-radius: 7px;
     height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border: 2px solid var(--primary-color);
 }
