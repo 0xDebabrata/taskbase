@@ -1,0 +1,39 @@
+.container {
+    height: calc(100vh - 55px);
+    width: 50%;
+    display: flex;
+    background: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 15px;
+}
+
+.list div {
+    width: 80%;
+    background-color: white;
+    border-radius: 7px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.list p {
+    margin: 0;
+    margin-left: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--primary-color);
+    font-weight: 400;
+}

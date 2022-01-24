@@ -2,6 +2,7 @@ import {useState} from "react"
 import Sidebar from "./Sidebar"
 import Files from "./Files"
 import Tasks from "./Tasks"
+import Participants from "./Participants"
 
 export default function ControlCentre({ projectId }) {
 
@@ -29,6 +30,9 @@ export default function ControlCentre({ projectId }) {
             )}
             {selectedTab.name === "Tasks" && (
                 <Tasks />
+            )}
+            {selectedTab.name === "Participants" && (
+                <Participants projectId={projectId} />
             )}
         </>
     )
