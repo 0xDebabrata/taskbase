@@ -96,7 +96,7 @@ const Name = ({ name, setName, handleSubmit }) => {
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    placeholder="Chemistry Project"
+                    placeholder="Eg: Chemistry Project"
                 />
                 <button type="submit"
                 >
@@ -236,7 +236,11 @@ const Suggestions = ({ setEmail, setFocus, setInvites, arr }) => {
 
     const handleClick = (email) => {
         setInvites(oldArr => {
-            return [...oldArr, email]
+            if (oldArr.includes(email)) {
+                return oldArr
+            } else {
+                return [...oldArr, email]
+            }
         })
         setFocus(false)
         setEmail("")

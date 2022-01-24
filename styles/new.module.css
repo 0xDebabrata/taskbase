@@ -9,8 +9,9 @@
 .box {
     width: 400px;
     border-radius: 7px;
-    background-color: gray;
+    background-color: var(--secondary-color);
     min-height: 190px;
+    color: var(--primary-color);
 }
 
 .tabs {
@@ -18,7 +19,7 @@
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    background-color: gray;
+    background-color: var(--secondary-color);
     border-radius: 7px;
 }
 
@@ -47,7 +48,7 @@
 
 .form {
     width: 100%;
-    padding: 10px;
+    padding: 10px 30px 30px 30px;
 }
 
 .form input {
@@ -56,6 +57,13 @@
     border: none;
     height: 30px;
     padding: 0 10px;
+    font-family: "Poppins";
+    color: #696969B0;
+}
+
+.form input::placeholder {
+    font-family: "Poppins";
+    color: #696969B0;
 }
 
 .form input:focus {
@@ -70,6 +78,9 @@
     width: 80px;
     float: right;
     margin: 10px 0;
+    margin-bottom: 30px;
+    background-color: var(--primary-color);
+    color: white;
 }
 
 /* INVITE */
@@ -79,7 +90,7 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .wrapper {
@@ -104,6 +115,8 @@
     border: none;
     height: 30px;
     width: 150px;
+    background-color: var(--primary-color);
+    color: white;
 }
 
 .inviteContainer input {
@@ -112,7 +125,15 @@
     border: none;
     height: 30px;
     padding: 0 10px;
-    margin-top: 15px;
+    margin: 15px 0;
+    font-family: "Poppins";
+    color: #696969B0;
+    font-weight: 400;
+}
+
+.inviteContainer input::placeholder {
+    color: #696969B0;
+    font-weight: 400;
 }
 
 .inviteContainer input:focus {
@@ -127,9 +148,20 @@
     margin: 10px 0 30px 0;
 }
 
-.btnWrapper p {
-    font-size: 14px;
+.btnWrapper a {
+    font-size: 12px;
     margin: 0;
+    transition: .5s all;
+    border-radius: 7px;
+    width: 50px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnWrapper a:hover {
+    background-color: #8561FF50;
 }
 
 .search {
@@ -140,7 +172,8 @@
 .suggestions {
     position: absolute;
     top: 50px;
-    background-color: pink;
+    background-color: #8561FF50;
+    backdrop-filter: blur(30px);
     border-radius: 7px;
     list-style: none;
     width: 100%;
