@@ -37,3 +37,45 @@
     color: var(--primary-color);
     font-weight: 400;
 }
+
+.invite {
+    width: 80%;
+    height: 65px;
+    margin: 0 auto 15px auto;
+    background-color: white;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.invite input {
+    flex: 1 auto;
+    font-family: "Poppins";
+    padding: 0 15px;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--secondary-color);
+    margin-right: 10px;
+    height: 30px;
+    color: #696969B0;
+}
+
+.invite input::placeholder {
+    color: #696969B0;
+}
+
+.invite input:focus {
+    outline: none;
+}
+
+.invite button {
+    height: 30px;
+    width: 80px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
