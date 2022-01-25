@@ -29,7 +29,7 @@ export default function ControlCentre({ projectId }) {
                 <Files projectId={projectId} />
             )}
             {selectedTab.name === "Tasks" && (
-                <Tasks />
+                <Tasks projectId={projectId} />
             )}
             {selectedTab.name === "Participants" && (
                 <Participants projectId={projectId} />
